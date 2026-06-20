@@ -37,7 +37,8 @@ Deployment checklist:
 - rollback plan for failed evals;
 - current GitHub reference status captured before teaching optional extensions;
 - trace ID propagated through every external write;
-- human approval for high-risk identity/billing actions.
+- human approval for high-risk identity/billing actions;
+- reviewed GitHub updates merged only after `make test` and evaluation evidence pass.
 
 Team challenge:
 
@@ -46,3 +47,5 @@ Team challenge:
 3. Add one golden case that would block production release if the migration regresses identity governance, ticket side effects, or voice-intake behavior.
 
 4Minds extension slot: add the partner's confirmed public repo/API here and implement it as a new tool class with golden cases before live demo. Do not invent an unofficial repo if the partner booth has not provided one.
+
+Follow-up: use `labs/06-github-update-workflow.md` to show how a production agent team reviews remote GitHub updates before promoting workshop or deployment code.

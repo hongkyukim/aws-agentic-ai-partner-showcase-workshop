@@ -58,3 +58,13 @@ python3 scripts/refresh_github_references.py
 ```
 
 The script does not require credentials. If GitHub rate-limits unauthenticated requests, set a temporary `GITHUB_TOKEN` in your shell for a higher API limit; do not commit it.
+
+## Remote update command
+
+Run this after a collaborator, GitHub Copilot workspace, or web editor creates a branch:
+
+```bash
+python3 scripts/inspect_github_updates.py
+```
+
+The generated `reports/github_remote_update_report.md` summarizes remote branches, ahead/behind counts, and last commits. Keep this report out of git because it is time-sensitive; use it as live workshop evidence during the GitHub collaboration lab.

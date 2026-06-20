@@ -70,6 +70,7 @@ Expected artifacts:
 4. Lab 3: add policy and approval gates (20 min)
 5. Lab 4: run evaluations and inspect traces (20 min)
 6. Lab 5: AWS/vendor extension discussion and repo refresh (10 min)
+7. Optional Lab 6: review and integrate the latest GitHub remote update (15 min)
 
 ### Half-day version
 
@@ -82,12 +83,27 @@ src/partner_agent_stack.py        Local agent, policy, tools, tracing, evaluatio
 scripts/generate_sample_data.py   Deterministic sample data generator
 scripts/run_quality_checks.py     Data and artifact validation
 scripts/refresh_github_references.py  Current GitHub metadata refresh for partner repos
+scripts/inspect_github_updates.py     Remote branch/update review report for GitHub collaboration
 scripts/run_demo.py               End-to-end local demo runner
 scripts/evaluate_agents.py        Golden-case production-readiness evals
 labs/                             Instructor-led lab guides
 prompts/                          Prompts for design reviews and booth discussions
+docs/                             Current GitHub reference map and refresh notes
 .github/workflows/ci.yml          GitHub Actions local-path validation
 ```
+
+## GitHub update workflow
+
+This repo includes a dedicated lab for safely consuming updates from GitHub without overwriting the verified local-first workshop stack:
+
+```bash
+git fetch origin --prune
+python3 scripts/inspect_github_updates.py
+git diff --stat main..origin/<branch-name>
+make test
+```
+
+Use `labs/06-github-update-workflow.md` to teach branch review, cherry-pick/merge decisions, token safety, and post-merge validation. The current remote inspection pattern treats title-only or placeholder branches as review material, not as a reason to replace the working labs.
 
 ## Optional AWS path
 

@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: setup data check references demo eval test clean
+.PHONY: setup data check references github-updates demo eval test clean
 
 setup:
 	$(PYTHON) --version
@@ -13,6 +13,9 @@ check: data
 
 references:
 	$(PYTHON) scripts/refresh_github_references.py
+
+github-updates:
+	$(PYTHON) scripts/inspect_github_updates.py
 
 demo: check
 	$(PYTHON) scripts/run_demo.py
