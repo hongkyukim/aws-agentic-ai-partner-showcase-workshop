@@ -1,1 +1,1 @@
-# aws-agentic-ai-partner-showcase-workshop
+# aws-agentic-ai-partner-showcase workshop
