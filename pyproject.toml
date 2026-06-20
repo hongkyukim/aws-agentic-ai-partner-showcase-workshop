@@ -1,0 +1,10 @@
+[project]
+name = "aws-agentic-ai-partner-showcase-workshop"
+version = "0.1.0"
+description = "Local-first workshop for production-ready AI agents on AWS with partner integration patterns."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,15 @@
+
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+data/raw/*.jsonl
+data/raw/*.json
+data/warehouse/*.jsonl
+reports/*.md
+!data/raw/.gitkeep
+!data/warehouse/.gitkeep
+!reports/.gitkeep
